@@ -102,7 +102,7 @@ var Environment = function(i, j, width, height) {
     this.draw = function(ctx) {
 
         const breeze = $.i18n("breeze");
-        const stench = $.i18n("stench");
+        const stench = $.i18n("BUZZ");
 
         for(var i = 0; i < this.i; i++){
             for(var j = 0; j < this.j; j++){

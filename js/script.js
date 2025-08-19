@@ -10,12 +10,12 @@ var canvas,			// Canvas DOM element
 function restart(){
 
     if (!env){
-        env = new Environment(15, 8, 64, 64);
+        env = new Environment(17, 8, 64, 64);
     }
 
     // We need to create a new environment if it is the first time of the player won
     if (isFinished) {
-        env = new Environment(15, 8, 64, 64);
+        env = new Environment(8, 8, 64, 64);
     } else {
         env.restart();
     }
