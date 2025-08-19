@@ -15,7 +15,7 @@ function restart(){
 
     // We need to create a new environment if it is the first time of the player won
     if (isFinished) {
-        env = new Environment(8, 8, 64, 64);
+        env = new Environment(17, 8, 64, 64);
     } else {
         env.restart();
     }
@@ -104,6 +104,7 @@ function displayGameOver(){
 }
 
 function displayCongratulations(){
+    $("#total-score").html(player.score);
     $("#modal-win").modal("show");
     resources.play("win", false);
     resources.stop("theme");
