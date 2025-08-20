@@ -85,7 +85,7 @@
             <div class="col-lg-9">
                 <div class="card card-game">
                     <div class="card-content">
-                        <canvas id="canvas" width="480" height="480" data-i18n="no-canvas-support"></canvas>
+                        <canvas id="canvas" width="0.001" height="0.001" data-i18n="no-canvas-support"></canvas>
                     </div>
                 </div>
             </div>
@@ -106,21 +106,21 @@
                             <div class="tab-pane fade show active" id="info-tab" role="tabpanel">
                                 <p>
                                     <img src="img/score-icon.png" width="16px" />
-                                    <span data-i18n="score">Score</span>:
+                                    <span data-i18n="total-score">Score</span>:
                                     <span id="score">0</span>
                                 </p>
                                 <p>
                                     <img src="img/arrow-icon.png" width="16px" />
-                                    <span data-i18n="arrow">Arrow</span>:
+                                    <span data-i18n="remaining-arrows">Arrow</span>:
                                     <span id="arrow">0</span>
                                 </p>
                                 <p>
                                     <img src="img/gold-icon.png" width="16px" />
-                                    <span data-i18n="remaining-golds">Remaining Golds</span>:
+                                    <span data-i18n="remaining-chips">Remaining Chips</span>:
                                     <span id="gold">0</span>
                                 </p>
                                 <hr />
-                                <button data-bs-toggle="modal" data-bs-target="#modal-share" class="btn btn-success" data-i18n="share">Share</button>
+                                <!-- <button data-bs-toggle="modal" data-bs-target="#modal-share" class="btn btn-success" data-i18n="share">Share</button> -->
                             </div>
                             <div class="tab-pane fade" id="settings-tab" role="tabpanel">
                                 <form>
@@ -157,7 +157,7 @@
                     <img src="img/game_over.jpg" alt="Sorry! game over">
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary btn-restart" data-i18n="restart">Restart</button>
+                    <button class="btn btn-primary btn-restart" onclick="location.reload()" data-i18n="restart">Restart</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
