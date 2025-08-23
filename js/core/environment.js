@@ -102,7 +102,7 @@ var Environment = function(i, j, width, height) {
     this.draw = function(ctx) {
 
         const breeze = $.i18n("breeze");
-        const stench = $.i18n("buzz");
+        const stench = $.i18n("buzzzz");
 
         for(var i = 0; i < this.i; i++){
             for(var j = 0; j < this.j; j++){
@@ -160,12 +160,20 @@ var Environment = function(i, j, width, height) {
         }
 	};
 
-    this.drawText = function(ctx, text, i, j, offset){
-        ctx.font="12px Verdana";
-        ctx.fillStyle = 'white';
-        ctx.textBaseline = "hanging";
-        ctx.fillText(text, i*this.width+2, j*this.height+offset);
+    this.drawText = function(ctx, text, i, j, offset) {
+    ctx.font = "19px Verdana";
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "black";  // outline for better visibility
+    ctx.lineWidth = 3;
+    ctx.textBaseline = "top";
+
+    let x = i * this.width + 2;
+    let y = j * this.height + offset;
+
+    ctx.strokeText(text, x, y); // black outline
+    ctx.fillText(text, x, y);   // white text
     }
+
 
     this.drawLine = function(ctx, x0, y0, x1, y1){
     	ctx.strokeStyle = 'gray';
